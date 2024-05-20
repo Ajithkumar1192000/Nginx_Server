@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <title>terraform</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            a:hover {
+              background-color: yellow;
+            }
+          </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-warning">
+
+            <div class="container-fluid">
+        
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <b><a class="nav-link" href="homepage.html">HOMEPAGE</a></b>
+                </li>
+                <li class="nav-item">
+                <b>  <a class="nav-link" href="unix.html">UNIX</a></b>
+                </li>
+                <li class="nav-item">
+                <b> <a class="nav-link" href="shellscript.html">SHELLSCRIPT</a></b>
+                </li>
+                <li class="nav-item">
+                <b>    <a class="nav-link" href="gitandgithub.html">GITANDGITHUB</a></b>
+                </li>
+        
+                <li class="nav-item">
+                <b>     <a class="nav-link" href="cronjob.html">CRONJOB</a></b>
+                </li>
+        
+                <li class="nav-item">
+                <b>    <a class="nav-link" href="devopslifecycle.html">DEVOPSLIFECYCLE</a></b>
+                  </li>
+                <li class="nav-item">
+                <b>  <a class="nav-link" href="jenkins.html">JENKINS</a></b>
+                </li>
+                <li class="nav-item">
+                <b>    <a class="nav-link" href="ansible.html">ANSIBLE</a></b>
+                  </li>
+                  <li class="nav-item">
+                  <b>  <a class="nav-link" href="TERRAFORM.html">TERRAFORM</a></b>
+                  </li>
+                  <li class="nav-item">
+                    <b>  <a class="nav-link" href="webservers.html">WEBSERVERS</a></b>
+                    </li>
+                    <li class="nav-item">
+                      <b>  <a class="nav-link" href="vscode.html">VS CODE</a></b>
+                      </li>
+              </ul>
+            </div>
+          
+        </nav>
+        <div class="container">
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                <h1><center>TERRAFORM</center></h1>
+                <h4><center>INTRODUCTION</center></h4>
+                <p><center>Terraform is an open-source infrastructure as code (IaC) tool developed by HashiCorp. It allows you to define and manage your infrastructure resources (like servers, networks, storage) in a human-readable configuration language called HashiCorp Configuration Language (HCL). This code can then be used to provision and manage your infrastructure across different cloud providers, on-premises environments, or even a hybrid combination.</center></p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                <h4><center>Key benifits of Terraform</center></h4>
+                <p>
+                    Here are some key benefits of using Terraform:<br/>
+<b>•Infrastructure as Code: </b>Terraform codifies your infrastructure, making it version controlled, reusable, and shareable. This allows for consistent and automated infrastructure deployments, reducing manual errors and improving collaboration within teams.<br/>
+<b>•Multi-Cloud Support: </b>Terraform works with various cloud providers like AWS, Azure, GCP, and many more. You can use the same configuration language to manage your infrastructure across different platforms.<br/>
+<b>•Modularity and Reusability:</b> You can break down your infrastructure into smaller, reusable modules, promoting code organization and simplifying complex deployments.<br/>
+<b>•State Management:</b> Terraform keeps track of the infrastructure resources it manages in a state file. This allows for idempotent operations, meaning you can re-run your Terraform configuration without creating duplicate resources.
+
+                </p>
+                </div>
+                </div>
+                <div class="container">
+                    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                        <h4><center>Architecture of Terraform</center></h4>
+Terraform architecture mainly consists of the following components:
+<ol>
+<b><li>Terraform Core</li></b>
+<p>Terraform’s core (also known as Terraform CLI) is built on a statically-compiled binary that’s developed using the Go programming language.
+
+    This binary is what generates the command line tool (CLI) known as “terraform,” which serves as the primary interface for Terraform users. It is open source and can be accessed on the Terraform GitHub repository.</p>
+<b><li>Providers</li></b>
+<p>Terraform providers are modules that enable Terraform to communicate with a diverse range of services and resources, including but not limited to cloud providers, databases, and DNS services. 
+
+    Each provider is responsible for defining the resources that Terraform can manage within a particular service and translating Terraform configurations into API calls that are specific to that service.
+    
+    Providers are available for numerous services and resources, including those developed by major cloud providers like AWS, Azure, and Google Cloud, as well as community-supported providers for various services. By utilizing providers, Terraform users can maintain their infrastructure in a consistent and reproducible manner, regardless of the underlying service or provider. </p>
+<b><li>State file</li></b>
+<p>The Terraform state file is an essential aspect of Terraform’s functionality. It is a JSON file that stores information about the resources that Terraform manages, as well as their current state and dependencies. 
+
+    Terraform utilizes the state file to determine the changes that need to be made to the infrastructure when a new configuration is applied. It also ensures that resources are not unnecessarily recreated across multiple runs of Terraform. 
+    
+    The state file can be kept locally on the machine running Terraform or remotely using a remote backend like Azure Storage Account or Amazon S3, or HashiCorp Consul. It is crucial to safeguard the state file and maintain frequent backups since it contains sensitive information about the infrastructure being managed.</p>
+                    </ol>
+                    <img id="img1"src="C:\Users\ajith\OneDrive\Desktop\nginx unix\images\Screenshot (170).png">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                       <h4>Advantages of Terraform:</h4> 
+<b>•Infrastructure as Code (IaC): </b>Terraform allows you to define your infrastructure in code, making it version controlled, reusable, and shareable. This leads to several benefits:
+<ol>
+<li>Consistency:</li> Ensures consistent infrastructure deployments across environments, reducing manual errors and promoting repeatability.
+<li>Collaboration:</li> Enables teams to easily collaborate on infrastructure changes by sharing and reviewing the code.
+<li>Version Control:</li> Allows tracking changes to your infrastructure over time and reverting to previous configurations if needed.
+                    </ol>
+<b>•Multi-Cloud Support:</b> Terraform works with a wide range of cloud providers (AWS, Azure, GCP, etc.) and on-premise environments. You can use the same configuration language to manage infrastructure across different platforms, simplifying multi-cloud deployments.<br/>
+<b>•Modularity and Reusability:</b> Terraform configurations can be broken down into smaller, reusable modules. This promotes code organization and simplifies complex infrastructure deployments. These modules can be used across different projects, saving time and effort.<br/>
+<b>•State Management:</b> Terraform keeps track of the infrastructure resources it manages in a state file. This allows for idempotent operations, meaning you can re-run your Terraform configuration without creating duplicate resources. It also provides a single source of truth for your infrastructure configuration.<br/>
+<b>•Automation:</b>Terraform enables infrastructure provisioning and management to be automated, reducing manual work and improving efficiency.
+<br/>
+<h4>Disadvantages of Terraform:</h4>
+<b>•Learning Curve: </b>Learning Terraform requires understanding HCL syntax and infrastructure concepts. This can have a learning curve, especially for beginners.<br/>
+<b>•Security Considerations: </b>Terraform configurations manage sensitive infrastructure resources. Improper access control or mistakes in configuration can lead to security vulnerabilities. It's crucial to implement proper security practices when using Terraform.<br/>
+<b>•Debugging: </b>Debugging errors in Terraform configurations can be challenging, especially for complex setups. Understanding the error messages and troubleshooting can require expertise.<br/>
+<b>•Vendor Lock-In:</b> While Terraform supports multiple providers, some advanced features or functionalities might be specific to a particular provider. Switching providers might require significant configuration changes.<br/>
+<b>•State Management Complexity:</b>Terraform state files are essential but can become complex for large or distributed deployments. Managing and keeping them consistent across environments requires extra care.
+
+
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                        <h4>Install and configure terraform</h4>
+                        <p>
+                            	Log in to your AWS Management Console.
+	Navigate to the EC2 service by clicking on "Services" in the top-left corner, then selecting "EC2" under the "Compute" section.
+	In the EC2 Management Console, you can search for "IAM" in the search bar located at the top of the page.
+	Once IAM appears in the search results, click on it to open the IAM console.
+	In the left sidebar, click on "Users" to manage IAM users.
+	Click on the "Add user" button.
+	Provide a name for the user 
+	Select the "Attach existing policies directly" option.
+	Search for and select the "AmazonEC2FullAccess" policy.
+	Click on the Next button.
+	Click on the "Create user" button to create the user.
+	Make sure to save the access key ID and secret access key provided during user creation.
+	After creating the user, click on the "Security credentials" tab for the newly created user.
+	Under the "Access keys" section, click on the "Create access key" button.
+	Select "CLI " radio button
+
+	and click the checkbox click next give description then create a access key it will create access and secret access key
+	Make sure to copy and securely store the access key ID and secret access key provided.
+	Goto EC2 instance using terminal.
+	Switch to the root user with sudo -i.
+	Create a folder named "terraform" using mkdir terraform.
+	Run the command “aws configure”.
+	Enter the access key ID and secret access key when prompted.
+	Provide the desired region.
+	Hit enter to confirm.
+	Create a file named main.tf in the terraform directory.
+	Open the main.tf file and add your Terraform configuration code. Make sure to include the correct AMI ID for your EC2 instance.
+	Navigate to the terraform directory.
+	Run “terraform init” to initialize the directory.
+	Run “terraform plan” to see the execution plan.
+	If the plan looks good, run “terraform apply” to apply the configuration and create the resources.
+	That's it! You've now set up an IAM user with appropriate permissions, created an access key for CLI access, prepared your environment for Terraform, configured AWS CLI, and applied Terraform configuration to provision resources on AWS.
+
+                        </p>
+                        <img id="img2"src="C:\Users\ajith\OneDrive\Desktop\nginx unix\images\Screenshot (171).png">
+                        <br/>
+                        <img id="img3"src="C:\Users\ajith\OneDrive\Desktop\nginx unix\images\Screenshot (173).png">
+                        <br/>
+                        <h5>References</h5>
+                <a href="https://developer.hashicorp.com/terraform/intro">terraform </a>
+                </div>
+            </div>
+            <div class="container">
+                <iframe src="C:\Users\ajith\OneDrive\Desktop\nginx unix\devops docs\Terraform documentation.pdf"height="900"width="1300"></iframe>
+            </div>
+    </body>
+    </html>

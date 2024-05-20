@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <title>gitandgithub</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+          a:hover {
+            background-color: yellow;
+          }
+        </style>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-sm bg-warning">
+
+        <div class="container-fluid">
+    
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <b><a class="nav-link" href="homepage.html">HOMEPAGE</a></b>
+            </li>
+            <li class="nav-item">
+            <b>  <a class="nav-link" href="unix.html">UNIX</a></b>
+            </li>
+            <li class="nav-item">
+            <b> <a class="nav-link" href="shellscript.html">SHELLSCRIPT</a></b>
+            </li>
+            <li class="nav-item">
+            <b>    <a class="nav-link" href="gitandgithub.html">GITANDGITHUB</a></b>
+            </li>
+    
+            <li class="nav-item">
+            <b>     <a class="nav-link" href="cronjob.html">CRONJOB</a></b>
+            </li>
+    
+            <li class="nav-item">
+            <b>    <a class="nav-link" href="devopslifecycle.html">DEVOPSLIFECYCLE</a></b>
+              </li>
+            <li class="nav-item">
+            <b>  <a class="nav-link" href="jenkins.html">JENKINS</a></b>
+            </li>
+            <li class="nav-item">
+            <b>    <a class="nav-link" href="ansible.html">ANSIBLE</a></b>
+              </li>
+              <li class="nav-item">
+              <b>  <a class="nav-link" href="TERRAFORM.html">TERRAFORM</a></b>
+              </li>
+              <li class="nav-item">
+                <b>  <a class="nav-link" href="webservers.html">WEBSERVERS</a></b>
+                </li>
+                <li class="nav-item">
+                  <b>  <a class="nav-link" href="vscode.html">VS CODE</a></b>
+                  </li>
+          </ul>
+        </div>
+      
+    </nav>
+        <div class="container">
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                <h1><center>GIT</center></h1>
+                <p>Git is the free and open source distributed version control system that's responsible for everything GitHub related that happens locally on your computer. This cheat sheet features the most important and commonly used Git commands for easy reference.</p>
+            <h1><center>GITHUB</center></h1>
+            <p>GitHub is a web-based platform used for version control and collaboration on projects primarily based on Git. It offers a range of features including source code management (version control), issue tracking, pull requests, code review, and project management tools.</p>
+            <p>GitHub is widely used by developers and teams for<br/>
+                •	managing and sharing code,<br/>
+                •	collaborating on projects, and<br/>
+                •	contributing to open-source software.
+                </p>    
+        </div>
+        </div>
+        <div class="container">
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                <p>
+                    Git commands 
+•	SETUP<br/>
+Configuring user information used across all local repositories<br/>
+# set a name that is identifiable for credit when review version history<br/>
+git config --global user.name “[firstname lastname]”<br/>
+# set an email address that will be associated with each history marker<br/>
+git config --global user.email “[valid-email]”<br/>a
+# set automatic command line coloring for Git for easy reviewing<br/>
+git config --global color.ui auto<br/>
+•	INIT<br/>
+Configuring user information, initializing and cloning repositories<br/>
+# initialize an existing directory as a Git repository<br/>
+git init<br/>
+# retrieve an entire repository from a hosted location via URL<br/>
+git clone [url]<br/>
+Working with snapshots and the Git staging area<br/>
+# show modified files in working directory, staged for your next commit<br/>
+git status<br/>
+# add a file as it looks now to your next commit (stage)<br/>
+git add [file]<br/>
+# unstage a file while retaining the changes in working directory<br/>
+git reset [file]<br/>
+# diff of what is changed but not staged<br/>
+git diff<br/>
+# diff of what is staged but not yet committed<br/>
+git diff --staged<br/>
+# commit your staged content as a new commit snapshot<br/>
+git commit -m “[descriptive message]”<br/>
+<p>BRANCH & MERGE</p>
+Isolating work in branches, changing context, and integrating changes<br/>
+# list your branches. a * will appear next to the currently active branch<br/>
+git branch<br/>
+# create a new branch at the current commit<br/>
+git branch [branch-name]<br/>
+# switch to another branch and check it out into your working directory<br/>
+git checkout<br/>
+# merge the specified branch’s history into the current one<br/>
+git merge [branch]<br/>
+# show all commits in the current branch’s history<br/>
+git log<br/>
+Retrieving updates from another repository and updating local repos<br/>
+# add a git URL as an alias<br/>
+git remote add [alias] [url]<br/>
+# fetch down all the branches from that Git remote<br/>
+git fetch [alias]<br/>
+# merge a remote branch into your current branch to bring it up to date<br/>
+git merge [alias]/[branch]<br/>
+# Transmit local branch commits to the remote repository branch<br/>
+git push [alias] [branch]<br/>
+# fetch and merge any commits from the tracking remote branch<br/>
+git pull<br/>
+•	TEMPORARY COMMITS<br/>
+Temporarily store modified, tracked files in order to change branches<br/>
+# Save modified and staged changes
+git stash<br/>
+# list stack-order of stashed file changes
+git stash list<br/>
+# write working from top of stash stack
+git stash pop<br/>
+# discard the changes from top of stash stack
+git stash drop
+
+
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class ="shadow-lg p-3 mb-5 bg-white rounded">
+                <h4>Advantages of Git</h4>
+                <p>
+                    Git and GitHub are often used together, but they serve different purposes and offer distinct advantages and disadvantages:
+<br/>
+<b>Distributed Version Control: </b>Git is a distributed version control system, meaning every developer has a complete copy of the repository on their local machine. This allows for offline work and faster operations.<br/>
+<b>Branching and Merging: </b>Git makes branching and merging workflows easy and efficient. Developers can work on features or fixes in parallel branches and merge them back into the main branch when ready.<br/>
+<b>Performance: </b>Git is designed to be fast, even with large repositories and long histories. Most operations are performed locally, which reduces the need for constant communication with a central server.<br/>
+<b>Flexibility: </b>Git is flexible and can be used for any type of project, from small personal projects to large enterprise applications. It's not tied to any specific development methodology or workflow.
+                </p>
+                <h4>Disadvantages of Git:</h4>
+<p>
+<b>   Steep Learning Curve:</b> Git has a steep learning curve, especially for beginners. Concepts like branching, merging, and rebasing can be challenging to understand initially.<br/>
+<b> Command Line Interface:</b> While Git does have GUI tools available, the command line interface is the most powerful and widely used. This can be intimidating for developers who are not comfortable with the command line.<br/>
+<b>   Lack of Built-in Collaboration Features:</b> Git itself does not provide built-in collaboration features like issue tracking, project management, or code review. These features are often handled by third-party tools or platforms like GitHub.<br/>
+</div>
+</div>
+<div class="container">
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+<b><h4>Advantages of GitHub:</h4></b><br/>
+<b>  Centralized Hosting:</b> GitHub provides a centralized platform for hosting Git repositories. This makes it easy to share code with others, collaborate on projects, and contribute to open-source projects.<br/>
+<b>  Code Review and Collaboration Tools: </b>GitHub offers features like pull requests, code reviews, issue tracking, and project management tools. These features facilitate collaboration among team members and help maintain code quality.<br/>
+<b>   Community and Ecosystem:</b> GitHub has a large and active community of developers. It's a popular platform for open-source projects, making it easy to discover and contribute to a wide range of projects.<br/>
+<b>  Integration with Third-Party Tools: </b>GitHub integrates with a wide range of third-party tools and services, such as continuous integration platforms, code quality analysis tools, and deployment services.<br/>
+<br/>
+<h4>Disadvantages of GitHub:</h4>
+    <b> Dependency on External Service:</b> GitHub is a third-party service, so there is a dependency on its availability and reliability. If GitHub experiences downtime or issues, it can disrupt workflows for developers and teams.<br/>
+    <b>Limited Control:</b> While GitHub provides a lot of features and flexibility, developers and organizations have limited control over the platform compared to hosting their own Git repositories.<br/>
+    <b>  Cost for Private Repositories: </b>While public repositories are free on GitHub, there is a cost associated with hosting private repositories. This can be a barrier for individuals or organizations with budget constraints.
+    </p>
+    <a href="https://digital.gov/resources/an-introduction-github/#:~:text=What%20is%20GitHub%3F,pages%20at%20the%20same%20time.">gitandgithub</a>
+            </div>
+        </div>
+<div class="container">
+  <iframe src="C:\Users\ajith\OneDrive\Desktop\nginx unix\devops docs\Git and Github.pdf"height="900"width="1300"></iframe>
+</div>
+    </body>
+</html>

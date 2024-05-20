@@ -1,0 +1,191 @@
+<html>
+    <head>
+        <title>ansible</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    #img1{
+        height: 400px;
+        width:500px;
+    }
+        
+            a:hover {
+              background-color: yellow;
+            }
+          
+    
+</style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-warning">
+
+            <div class="container-fluid">
+        
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <b><a class="nav-link" href="homepage.html">HOMEPAGE</a></b>
+                </li>
+                <li class="nav-item">
+                <b>  <a class="nav-link" href="unix.html">UNIX</a></b>
+                </li>
+                <li class="nav-item">
+                <b> <a class="nav-link" href="shellscript.html">SHELLSCRIPT</a></b>
+                </li>
+                <li class="nav-item">
+                <b>    <a class="nav-link" href="gitandgithub.html">GITANDGITHUB</a></b>
+                </li>
+        
+                <li class="nav-item">
+                <b>     <a class="nav-link" href="cronjob.html">CRONJOB</a></b>
+                </li>
+        
+                <li class="nav-item">
+                <b>    <a class="nav-link" href="devopslifecycle.html">DEVOPSLIFECYCLE</a></b>
+                  </li>
+                <li class="nav-item">
+                <b>  <a class="nav-link" href="jenkins.html">JENKINS</a></b>
+                </li>
+                <li class="nav-item">
+                <b>    <a class="nav-link" href="ansible.html">ANSIBLE</a></b>
+                  </li>
+                  <li class="nav-item">
+                  <b>  <a class="nav-link" href="TERRAFORM.html">TERRAFORM</a></b>
+                  </li>
+                  <li class="nav-item">
+                    <b>  <a class="nav-link" href="webservers.html">WEBSERVERS</a></b>
+                    </li>
+                    <li class="nav-item">
+                      <b>  <a class="nav-link" href="vscode.html">VS CODE</a></b>
+                      </li>
+              </ul>
+            </div>
+          
+        </nav>
+
+        <div class="container">
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+<h1><center>ANSIBLE</center></h1>
+<h4><center>INTRODUCTION</center></h4>
+<p>Ansible is an open-source automation tool used for application deployment, cloud provisioning, intraservice orchestration, and other IT tasks. It operates by connecting to nodes through SSH, enabling agentless execution and ensuring security without installing additional software on managed hosts. With its declarative language, YAML, Ansible simplifies task and configuration definitions, facilitating efficient automation of complex IT workflows with minimal coding required</p>
+<h4>Benifits of ansible</h4>
+<ol>
+    <li>Free: Ansible is an open-source tool.</li>
+<li>Very simple to set up and use: No special coding skills are necessary to use Ansible's playbooks (more on playbooks later).</li>
+	<li>Powerful: Ansible lets you model even highly complex IT workflows. </li>
+<li>Flexible: You can orchestrate the entire application environment no matter where it's deployed. You can also customize it based on your needs.</li>
+	<li>Agentless: You don't need to install any other software or firewall ports on the client systems you want to automate. You also don't have to set up a separate management structure.</li>
+<li>Efficient: Because you don't need to install any extra software, there's more room for application resources on your server.</li>
+
+</ol>            
+
+</div>
+        </div>
+        <div class="container">
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                <h3>ANSIBLE ARCHIRECTURE</h3>
+                <img id="img1"src="https://www.interviewbit.com/blog/wp-content/uploads/2022/06/Ansible-Architecture-1024x560.png">
+                <br/>
+                <h6>key terminologies</h6>
+                <p>
+                  
+It is important to understand these terminologies before diving into the topic deeply. <br/>
+•	Ansible Server: The node where Ansible is installed. This is the node from which orchestration is done. <br/>
+•	Playbook: It is a set icon commands written in YAML that describes what should be done and where it should be done. <br/>
+•	Tasks: A task is a single procedure that should be done. <br/>
+•	Role: This is a way of encapsulating tasks and files related to them so that they can be later used in the playbook. <br/>
+•	Inventory: It is a file containing the details about the client nodes. <br/>
+•	Handler: A handler is a task that is called when a notifier (similar to a trigger in other technologies) is present in the playbook.<br/> 
+•	Module: A unit of code or binary that Ansible runs on managed nodes. <br/>
+•	Ansible nodes/hosts: The independent systems that are managed by the Ansible server are called nodes or hosts. 
+  
+
+                </p>
+                <a href="https://docs.ansible.com/ansible/latest/dev_guide/overview_architecture.html">ansible architecture</a>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                <h6>There are three ways to configuration using ansible</h6>
+                    <ol>
+                        <li>adhoc commnads</li>
+                        <li>Using module</li>
+                        <li>Ansible playbook</li>
+                    </ol>
+                <p>In this we will discuss that ansible playbook</p>
+                <p>These are the ordered list of tasks that are saved so you can run those tasks in that order repeatedly. Playbooks are written in YAML and are easy to read, write, share and understand. Ansible playbooks can perform wide variety of tasks as mentioned below 
+                    <ol>
+                    <li>Deploying and configuring applications </li>
+                <li>2.	Managing system configurations</li> 
+                <li>3.	Orchestrating complex workflows </li>
+                </ol>
+                    </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                <h3>INSTALLING AND CONFIGURING THE ANSILE</h3>
+                <p>
+                    Step 1. Create one main ansible instance and 2-3 node instance. Now in main ansible 
+--> Go to root use:  sudo -i <br/>
+Step 2. Now install ansible use the command:  amazon-linux-extras install ansible2 y <br/>
+           Step 3. Now check the ansible version:  ansible --version <br/>
+           Step 4. Install python use : yum install git python python-pip python-level openssl -y <br/>
+           Step 5. Now check the python version : python --version <br/>
+           Step 6. vi /etc/ansible/hosts : using this command, create a cluster or user(ex:dev) and then, Add private IP address of another instance in this file. This will create nodes. 
+                 ex:  *user_defined_name+ -- name of the cluster 	       Private IP address of atleast 2 nodes <br/>
+                 Step 7. vi /etc/ansible/ansible.cfg: using this command Comment out Inventary and sudo_user. <br/>
+                 Step 8. Now add a user, use the command: useradd ansible   <br/>
+                 Step 9. Set a password and remember it (to use in nodes aswell) use the command:  
+                 passwd ansible  <br/>
+                 Step 10. Make it super user and in root add ansible ALL=(ALL) NOPASSWD: ALL 
+                   use the command: visudo  <br/>
+                   step 11. Now change the password authentication from no to yes, use the command 
+                   : vim /etc/ssh/sshd_config   <br/>
+                   step 12. Now restart ssh, use the command: systemctl restart sshd (or) service sshd restart  <br/>
+                   step 13. Now check the status of ssh, use the command:  systemctl status ssh (or) service ssh status  <br/>
+                   Step 14. Go to ansible user, use the command: su – ansible  <br/>
+                   Step 15. Make sure you do both nodes configuration before creating key 
+                   <ul>
+                   <li>sudo -i </li>
+                <li>	useradd ansible </li>
+            <li>	passwd ansible </li>
+                <li> 	visudo -- after root add -- ansible ALL=(ALL) NOPASSWD: ALL </li>
+            	<li>vim /etc/ssh/sshd_config -- goto passwd and make it replace no with yes </li>
+<li>systemctl restart ssh </li>
+<li>systemctl status ssh </li>
+
+</ul>             
+Step 16. Create a key use the command:  ssh-keygen <br/>
+Step 17. ssh-copyid ansible@localhost: give same password while authenticating and        then copy from above (ssh 'ansible@localhost’) <br/>
+Step 18. Now copy the ssh-copy-id ansible@publicipofnode1 <br/>
+           Step 19. Now copy from above: ssh 'ansible@publicIPnode1' <br/>
+           Step 20. Do the same for other nodes too,<br/>
+-->ssh-copy-id ansible@publicIDofnode2 <br/>
+-->ssh 'ansible@publicIPnode2' <br/>
+Step 21. Make sure you do these nodes configuration before creating key  <br/>
+Step 22. Now come to main ansible to create a playbook <br/>
+Step 23. use this command to list the hosts: ansible all --list-hosts  <br/>
+Step 24. Use this command: ansible dev --list-hosts  <br/>       
+Step 25. use this command to create module: ansible dev -b -m yum -a "pkg=docker state=present" <br/>
+Step 26. Now create a playbook, use the command: vim filename.yml <br/>
+Step 27. Now run the playbook use:  ansible-playbook filename.yml <br/>
+
+<b>now  you check in the nodes of the desired output</b>
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                <h4>REFERENCES</h4>
+                <a href="https://www.youtube.com/watch?v=py6NFVWOOPw">Ansible configuration</a><br/>
+                <a href="https://docs.ansible.com/ansible/latest/getting_started/introduction.html">Ansible docs</a>
+            </div>
+        </div>
+        <div class="container">
+            <iframe src="C:\Users\ajith\OneDrive\Desktop\nginx unix\devops docs\ansible.pdf"height="900"width="1300"></iframe>
+        </div>
+    </body>
+</html>
